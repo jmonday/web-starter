@@ -1,0 +1,16 @@
+<ul>
+  <li>
+    <a routerLink="/widgets">Widgets</a>
+  </li>
+  <li *ngIf="user">
+    <a routerLink="/profile">Profile</a>
+  </li>
+  <li *ngIf="!user">
+    <a routerLink="/login">Login</a>
+  </li>
+  <li *ngIf="user">
+    <button (click)="logout()">Logout</button>
+  </li>
+</ul>
+
+<router-outlet></router-outlet>
